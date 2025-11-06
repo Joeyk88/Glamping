@@ -1,0 +1,116 @@
+/* Mobile First*/
+.pageheader {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  padding: 150px 20px 20px;
+  overflow: hidden;
+}
+
+.pageheader::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../Gittes_Glamping_Assets/image_00.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translate(-40%, -60%) scale(1.8);
+  z-index: 0;
+}
+
+.headerContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: none;
+}
+
+.pageheader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(129, 129, 129, 0.78);
+  z-index: 1;
+}
+
+.logo {
+  width: 72px;
+  height: auto;
+  background: none;
+}
+
+.subHeaderText {
+  text-align: center;
+  font-size: 64px;
+  margin: 0;
+  padding: 0 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background: none;
+  letter-spacing: 0.1em;
+}
+
+.headerText {
+  text-align: center;
+  font-size: 96px;
+  margin: 0;
+  padding: 0 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background: none;
+  letter-spacing: 0.1em;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .pageheader {
+    min-height: 80vh;
+  }
+
+  .pageheader::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .headerContent {
+    gap: 40px;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .headerText {
+    font-size: clamp(64px, 8vw, 96px);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .pageheader {
+    min-height: 70vh;
+  }
+
+  .headerContent {
+    gap: 20px;
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  .headerText {
+    font-size: 96px;
+  }
+}
