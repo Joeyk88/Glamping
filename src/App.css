@@ -62,3 +62,11 @@ h5 {
   line-height: 100%;
   letter-spacing: 0%;
 }
+h6 {
+  font-family: Zen Loop;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
