@@ -4,16 +4,17 @@
   height: 1000px;
   margin-top: 708px;
   opacity: 1;
-  background-color: rgba(51, 98, 108, 1);
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 50px;
   position: relative;
+  display: flex;
 }
 
 .content {
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: rgba(51, 98, 108, 1);
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .heading {
@@ -27,6 +28,7 @@
   margin: 0;
   font-weight: bold;
   line-height: 1.2;
+  background-color: rgba(51, 98, 108, 1);
 }
 
 .description {
@@ -40,6 +42,7 @@
   font-weight: normal;
   line-height: 1.5;
   color: rgba(255, 255, 255, 1);
+  background-color: rgba(51, 98, 108, 1);
 }
 
 .imageContainer {
@@ -48,6 +51,7 @@
   left: 105px;
   width: 182px;
   height: 176px;
+  background-color: rgba(51, 98, 108, 1);
 }
 
 .gitteImage {
@@ -56,6 +60,15 @@
   opacity: 1;
   border-radius: 100px;
   object-fit: cover;
+}
+
+.buttonContainer {
+  position: absolute;
+  top: 779px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
 }
 
 /* Tablet and larger screens */

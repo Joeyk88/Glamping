@@ -1,5 +1,6 @@
 import styles from "./infosection.module.css";
 import gitteImage from "../../Gittes_Glamping_Assets/gitte.jpg";
+import Button from "../button/Button";
 
 const InfoSection = () => {
   return (
@@ -21,6 +22,10 @@ const InfoSection = () => {
 
         <div className={styles.imageContainer}>
           <img src={gitteImage} alt="Gitte" className={styles.gitteImage} />
+        </div>
+
+        <div className={styles.buttonContainer}>
+          <Button buttonText="SE VORES OPHOLD" variant="secondary" />
         </div>
       </div>
     </section>
