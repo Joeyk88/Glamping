@@ -101,6 +101,11 @@
   background-color: rgba(130, 155, 151, 1);
 }
 
+.menuContent a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Menu Items */
 .menuItem {
   color: rgba(255, 255, 255, 1);
