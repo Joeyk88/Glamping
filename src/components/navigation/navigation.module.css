@@ -1,0 +1,161 @@
+/* Mobile First */
+.navigation {
+  position: relative;
+  width: 100%;
+}
+
+/* Burger Button */
+.burgerButton {
+  width: 64px;
+  height: 52px;
+  opacity: 1;
+  background-color: rgba(130, 155, 151, 1);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 45px;
+  right: 13px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Burger Lines Container */
+.burgerLines {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+  opacity: 1;
+  position: relative;
+  background-color: rgba(130, 155, 151, 1);
+}
+
+/* Individual Lines */
+.line {
+  width: 26px;
+  height: 2px;
+  opacity: 1;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transition: all 0.3s ease;
+}
+
+/* Active state - Transform to X */
+.burgerButton.active .burgerLines {
+  width: 28px;
+  height: 28px;
+  opacity: 1;
+  position: relative;
+}
+
+.burgerButton.active .line:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(45deg);
+  width: 28px;
+}
+
+.burgerButton.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerButton.active .line:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(-45deg);
+  width: 28px;
+}
+
+/* Menu Container */
+.menuContainer {
+  width: 298px;
+  height: 436px;
+  opacity: 1;
+  gap: 50px;
+  padding: 33px 34px;
+  background-color: rgba(130, 155, 151, 1);
+  position: absolute;
+  top: 110px;
+  right: 13px;
+  border-radius: 10px;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu Content */
+.menuContent {
+  width: 230px;
+  height: 305px;
+  opacity: 1;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(130, 155, 151, 1);
+}
+
+/* Menu Items */
+.menuItem {
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  font-weight: normal;
+  background-color: rgba(130, 155, 151, 1);
+}
+
+.menuItem:hover {
+  opacity: 0.8;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .burgerButton {
+    right: 50px;
+  }
+
+  .menuContainer {
+    right: 50px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .navigation {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+  }
+
+  .burgerButton {
+    position: static;
+  }
+
+  .menuContainer {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .menuContent {
+    flex-direction: row;
+    gap: 30px;
+    width: auto;
+    height: auto;
+  }
+
+  .menuItem {
+    padding: 0;
+  }
+}
