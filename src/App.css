@@ -54,3 +54,11 @@ h4 {
   text-align: center;
   color: rgba(255, 255, 255, 1);
 }
+h5 {
+  font-family: Zen Loop;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}

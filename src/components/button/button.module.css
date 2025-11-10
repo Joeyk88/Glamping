@@ -1,0 +1,117 @@
+/* Base button styles */
+.button {
+  opacity: 1;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonText {
+  margin: 0;
+  opacity: 1;
+}
+
+/* Variant 1: BOOK NU (hvid kant og tekst) */
+.primary {
+  width: 282px;
+  height: 96.97px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: transparent;
+}
+
+.primary .buttonText {
+  width: 137px;
+  height: 46.52px;
+  color: rgba(255, 255, 255, 1);
+  background-color: transparent;
+}
+
+/* Variant 2: SE VORES OPHOLD (grøn kant og tekst) */
+.secondary {
+  width: 282px;
+  height: 96.97px;
+  border: 1px solid rgba(130, 155, 151, 1);
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: rgba(130, 155, 151, 1);
+}
+
+.secondary .buttonText {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(130, 155, 151, 1);
+}
+
+/* Variant 3: Læs mere (grøn kant og tekst) */
+.tertiary {
+  width: 282px;
+  height: 96.97px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: transparent;
+}
+
+.tertiary .buttonText {
+  width: 137px;
+  height: 46.52px;
+  color: rgba(130, 155, 151, 1);
+}
+
+/* Variant 4: Book nu (grøn, anden størrelse) */
+.quaternary {
+  width: 265px;
+  height: 103px;
+  gap: 28px;
+  border: 1px solid rgba(130, 155, 151, 1);
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 43px 17px;
+  background-color: transparent;
+}
+
+.quaternary .buttonText {
+  color: rgba(130, 155, 151, 1);
+}
+
+/* Variant 5: Indsend (grøn) */
+.submit {
+  width: 265px;
+  height: 103px;
+  gap: 28px;
+  border: 1px solid rgba(130, 155, 151, 1);
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 43px 17px;
+  background-color: transparent;
+}
+
+.submit .buttonText {
+  width: 91px;
+  height: 54px;
+  color: rgba(130, 155, 151, 1);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .button {
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+  }
+
+  .primary:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .secondary:hover,
+  .tertiary:hover,
+  .quaternary:hover,
+  .submit:hover {
+    border-color: rgba(130, 155, 151, 0.8);
+  }
+}
