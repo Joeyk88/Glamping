@@ -2,10 +2,8 @@
 .infoSection {
   width: 390px;
   height: 1000px;
-  margin-top: 708px;
+  margin-top: -60px;
   opacity: 1;
-  position: relative;
-  display: flex;
 }
 
 .content {
@@ -78,6 +76,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -80px;
   }
 
   .heading {
@@ -101,27 +100,78 @@
 /* Desktop */
 @media (min-width: 1024px) {
   .infoSection {
+    width: 100%;
+    max-width: 1400px;
     height: auto;
-    padding: 80px 40px;
+    margin: -100px auto 0;
+    padding: 0;
   }
 
   .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-rows: auto auto;
+    gap: 60px;
     align-items: center;
     position: static;
+    padding: 80px 60px;
+    border-radius: 50px;
   }
 
-  .heading,
+  .heading {
+    position: static;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 42px;
+  }
+
   .description {
     position: static;
     width: 100%;
+    max-width: 550px;
     height: auto;
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 18px;
+    line-height: 1.8;
   }
 
   .imageContainer {
     position: static;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
     justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .gitteImage {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .gitteImage:hover {
+    transform: scale(1.05);
+  }
+
+  .buttonContainer {
+    position: static;
+    transform: none;
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    align-self: end;
   }
 }

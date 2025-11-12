@@ -1,24 +1,30 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import styles from "./navigation.module.css";
 
-const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Navigation() {
+  const [open, setOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const close = () => setOpen(false);
 
   return (
     <nav className={styles.navigation}>
       <button
-        className={`${styles.burgerButton} ${isOpen ? styles.active : ""}`}
-        onClick={toggleMenu}
-        aria-label="Toggle menu"
+        className={`${styles.burgerButton} ${open ? styles.active : ""}`}
+        aria-label={open ? "Luk menu" : "Åbn menu"}
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
       >
         <div className={styles.burgerLines}>
           <span className={styles.line}></span>
@@ -27,26 +33,48 @@ const Navigation = () => {
         </div>
       </button>
 
-      {isOpen && (
+      {(open || isDesktop) && (
         <div className={styles.menuContainer}>
           <div className={styles.menuContent}>
-            <Link to="/ophold" onClick={closeMenu}>
+            <NavLink
+              to="/ophold"
+              onClick={close}
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
               <h3 className={styles.menuItem}>Ophold</h3>
-            </Link>
-            <Link to="/kontakt" onClick={closeMenu}>
+            </NavLink>
+            <NavLink
+              to="/kontakt"
+              onClick={close}
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
               <h3 className={styles.menuItem}>Kontakt</h3>
-            </Link>
-            <Link to="/aktiviteter" onClick={closeMenu}>
+            </NavLink>
+            <NavLink
+              to="/aktiviteter"
+              onClick={close}
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
               <h3 className={styles.menuItem}>Aktiviteter</h3>
-            </Link>
-            <Link to="/min-liste" onClick={closeMenu}>
+            </NavLink>
+            <NavLink
+              to="/min-liste"
+              onClick={close}
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
               <h3 className={styles.menuItem}>Min liste</h3>
-            </Link>
+            </NavLink>
           </div>
         </div>
       )}
     </nav>
   );
-};
-
-export default Navigation;
+}

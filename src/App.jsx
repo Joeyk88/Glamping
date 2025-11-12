@@ -11,15 +11,19 @@ import MyList from "./pages/MyList";
 function App() {
   return (
     <Router>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/ophold" element={<Stay />} />
-        <Route path="/kontakt" element={<ContactPage />} />
-        <Route path="/aktiviteter" element={<Events />} />
-        <Route path="/min-liste" element={<MyList />} />
-      </Routes>
-      <Contact />
+      <div className="App">
+        <Navigation />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/ophold" element={<Stay />} />
+            <Route path="/kontakt" element={<ContactPage />} />
+            <Route path="/aktiviteter" element={<Events />} />
+            <Route path="/min-liste" element={<MyList />} />
+          </Routes>
+          <Contact />
+        </main>
+      </div>
     </Router>
   );
 }

@@ -1,0 +1,162 @@
+/* Mobile First - 390px width */
+.heroSection {
+  position: relative;
+  width: 390px;
+  height: 1178px;
+}
+
+/* Background Image Container */
+.backgroundImage {
+  width: 390px;
+  height: 694px;
+  opacity: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  box-shadow: inset 0 0 0 1000px rgba(54, 54, 54, 0.56);
+}
+
+/* Logo Link */
+.logoLink {
+  position: absolute;
+  top: 26px;
+  left: 45px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  z-index: 1001;
+  display: block;
+}
+
+.logoLink:hover {
+  opacity: 0.8;
+}
+
+/* Logo */
+.logo {
+  width: 52px;
+  height: 52px;
+  opacity: 1;
+  display: block;
+  pointer-events: auto;
+}
+
+/* Header Title */
+.headerTitle {
+  width: 326px;
+  height: 81px;
+  opacity: 1;
+  position: absolute;
+  top: 205px;
+  left: 33px;
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Headline Container */
+.headline {
+  width: 390px;
+  height: 592px;
+  opacity: 1;
+  position: absolute;
+  top: 586px;
+  left: 0;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: rgba(51, 98, 108, 1);
+  padding: 0;
+}
+
+/* Title (inside headline) */
+.title {
+  width: 323px;
+  height: 168px;
+  opacity: 1;
+  position: absolute;
+  top: 86px;
+  left: 33px;
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Subtitle (inside headline) */
+.subtitle {
+  width: 349px;
+  height: 229px;
+  opacity: 1;
+  position: absolute;
+  top: 267px;
+  left: 21px;
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .heroSection {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+  }
+
+  .backgroundImage {
+    width: 100%;
+    height: 500px;
+  }
+
+  .headline {
+    width: 100%;
+    position: relative;
+    top: -100px;
+    margin-bottom: -100px;
+  }
+
+  .headerTitle {
+    width: auto;
+    max-width: 600px;
+    left: 5%;
+  }
+
+  .title {
+    width: auto;
+    max-width: 600px;
+    left: 5%;
+  }
+
+  .subtitle {
+    width: auto;
+    max-width: 700px;
+    left: 5%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .backgroundImage {
+    height: 600px;
+  }
+
+  .headline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 80px 40px;
+    height: auto;
+  }
+
+  .title,
+  .subtitle {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+}
