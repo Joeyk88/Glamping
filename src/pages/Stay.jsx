@@ -1,4 +1,5 @@
 import HeroSection from "../components/heroSection/HeroSection";
+import StaySection from "../components/staySection/StaySection";
 import heroImage from "../Gittes_Glamping_Assets/image_01.jpg";
 
 const Stay = () => {
@@ -14,6 +15,7 @@ const Stay = () => {
         Book dit ophold i dag og giv dig selv lov til at fordybe dig i naturen og nyde luksus i det 
         fri. Vi ser frem tid at byde dig velkommen til en oplevelse fyldt med komfort, eventyr og skønhed."
       />
+      <StaySection />
     </div>
   );
 };

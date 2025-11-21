@@ -1,5 +1,5 @@
 /* Mobile First */
-.contact {
+.footer {
   width: 390px;
   height: 390px;
   opacity: 1;
@@ -66,19 +66,19 @@
 
 /* Tablet and larger screens */
 @media (min-width: 768px) {
-  .contact {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  .footer {
+    width: 768px;
   }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .contact {
+  .footer {
+    width: 100%;
+    max-width: 1400px;
     height: auto;
     padding: 60px 40px;
+    margin: 0 auto;
     flex-direction: row;
     justify-content: space-between;
   }

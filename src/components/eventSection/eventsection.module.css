@@ -1,0 +1,292 @@
+/* Mobile First - 390px width */
+.eventSection {
+  width: 390px;
+  background-color: rgba(206, 211, 205, 1);
+  padding: 40px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Event Card */
+.eventCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Event Header */
+.eventHeader {
+  width: 361px;
+  min-height: 132px;
+  padding: 14px 45px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: rgba(197, 180, 150, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -20px;
+}
+
+.eventHeader h2 {
+  color: rgba(255, 255, 255, 1);
+  font-family: "Zen Loop", cursive;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 100%;
+  text-align: center;
+  margin: 0;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Event Image */
+.eventImage {
+  width: 390px;
+  height: 311px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Event Details */
+.eventDetails {
+  width: 361px;
+  min-height: 194px;
+  padding: 25px 42px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: rgba(51, 98, 108, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  margin-top: -20px;
+  z-index: 1;
+}
+
+.eventDetails h3 {
+  color: rgba(255, 255, 255, 1);
+  font-family: "Zen Loop", cursive;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  text-align: center;
+  margin: 0;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Toggle Button */
+.toggleButton {
+  width: 325px;
+  height: 63px;
+  padding: 14px 45px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 1);
+  font-family: "Zen Loop", cursive;
+  font-weight: 400;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggleButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.toggleButton:active {
+  transform: translateY(0);
+}
+
+.icon {
+  font-size: 28px;
+}
+
+/* Event Content */
+.eventContent {
+  width: 296px;
+  padding-top: 15px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.eventContent p {
+  font-family: "Zen Loop", cursive;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .eventSection {
+    width: 768px;
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  .eventHeader {
+    width: 420px;
+    min-height: 150px;
+  }
+
+  .eventHeader h2 {
+    font-size: 72px;
+  }
+
+  .eventImage {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+  }
+
+  .eventDetails {
+    width: 420px;
+    min-height: 220px;
+  }
+
+  .eventDetails h3 {
+    font-size: 36px;
+  }
+
+  .toggleButton {
+    width: 350px;
+    height: 70px;
+    font-size: 26px;
+  }
+
+  .eventContent {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .eventContent p {
+    font-size: 22px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .eventSection {
+    width: 100%;
+    max-width: 1400px;
+    padding: 80px 60px;
+    margin: 0 auto;
+    gap: 60px;
+  }
+
+  .eventCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .eventCard:nth-child(odd) .eventHeader {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .eventCard:nth-child(odd) .eventImage {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .eventCard:nth-child(odd) .eventDetails {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .eventCard:nth-child(even) .eventHeader {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .eventCard:nth-child(even) .eventImage {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .eventCard:nth-child(even) .eventDetails {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .eventHeader {
+    width: 480px;
+    min-height: 160px;
+    margin-bottom: 0;
+  }
+
+  .eventHeader h2 {
+    font-size: 80px;
+    width: auto;
+    height: auto;
+  }
+
+  .eventImage {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+  }
+
+  .eventDetails {
+    width: 480px;
+    min-height: 300px;
+    padding: 40px 50px;
+  }
+
+  .eventDetails h3 {
+    font-size: 40px;
+    width: auto;
+    height: auto;
+  }
+
+  .toggleButton {
+    width: 380px;
+    height: 75px;
+    font-size: 28px;
+  }
+
+  .eventContent {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .eventContent p {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}

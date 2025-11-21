@@ -1,11 +1,11 @@
-import styles from "./contact.module.css";
+import styles from "./footer.module.css";
 import { ImFacebook2 } from "react-icons/im";
 import { TbBrandInstagramFilled } from "react-icons/tb";
 import logo from "/logo.png";
 
-const Contact = () => {
+const Footer = () => {
   return (
-    <section className={styles.contact}>
+    <section className={styles.footer}>
       <div className={styles.socialIcons}>
         <ImFacebook2 className={styles.icon} />
         <TbBrandInstagramFilled
@@ -20,4 +20,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Footer;

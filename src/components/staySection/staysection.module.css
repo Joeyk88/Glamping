@@ -1,0 +1,173 @@
+/* Mobile First - 390px width */
+.staySection {
+  width: 389px;
+  height: auto;
+  min-height: 605px;
+  opacity: 1;
+  background-color: rgba(206, 211, 205, 1);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Stays Container */
+.staysContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Stay Card */
+.stayCard {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stayCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Stay Image */
+.stayImage {
+  width: 389px;
+  height: 311px;
+  opacity: 1;
+  object-fit: cover;
+  display: block;
+  box-shadow: inset 0 0 0 1000px rgba(129, 129, 129, 0.668);
+}
+
+/* Stay Info */
+.stayInfo {
+  width: 360px;
+  height: 182px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 45px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: rgba(197, 180, 150, 1);
+}
+
+/* Stay Name */
+.stayName {
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Stay Details */
+.stayDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Stay Persons */
+.stayPersons {
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Stay Price */
+.stayPrice {
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Button Container */
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .staySection {
+    width: 768px;
+    padding: 60px 40px;
+  }
+
+  .staysContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .stayCard {
+    width: calc(50% - 15px);
+  }
+
+  .stayImage {
+    height: 220px;
+  }
+
+  .stayName {
+    font-size: 24px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .staySection {
+    width: 100%;
+    max-width: 1400px;
+    padding: 80px 60px;
+    margin: 0 auto;
+  }
+
+  .staysContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .stayCard {
+    width: calc(33.333% - 27px);
+  }
+
+  .stayImage {
+    height: 250px;
+    transition: transform 0.3s ease;
+  }
+
+  .stayCard:hover .stayImage {
+    transform: scale(1.05);
+  }
+
+  .stayInfo {
+    padding: 25px;
+  }
+
+  .stayName {
+    font-size: 26px;
+  }
+
+  .buttonContainer {
+    margin-top: 20px;
+  }
+}

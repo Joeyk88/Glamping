@@ -1,6 +1,11 @@
 import styles from "../button/button.module.css";
 
-const Button = ({ buttonText, onClick, variant = "primary" }) => {
+const Button = ({
+  buttonText,
+  onClick,
+  variant = "primary",
+  type = "button",
+}) => {
   const variantClass = {
     primary: styles.primary, // BOOK NU (hvid)
     secondary: styles.secondary, // SE VORES OPHOLD (grøn)
@@ -11,6 +16,7 @@ const Button = ({ buttonText, onClick, variant = "primary" }) => {
 
   return (
     <button
+      type={type}
       className={`${styles.button} ${variantClass[variant] || styles.primary}`}
       onClick={onClick}
     >
