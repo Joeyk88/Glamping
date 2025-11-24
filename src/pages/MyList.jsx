@@ -7,8 +7,7 @@ const MyList = () => {
       <HeroSection
         backgroundImage={heroImage}
         headerTitle="Min Liste"
-        title="Dine favoritter"
-        subtitle="Her kan du samle alle dine favorit ophold og aktiviteter, så du nemt kan finde tilbage til dem og planlægge dit perfekte glamping-ophold."
+        title="Antal aktiviteter og ophold i din liste:"
       />
     </div>
   );

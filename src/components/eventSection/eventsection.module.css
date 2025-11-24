@@ -1,4 +1,4 @@
-/* Mobile First - 390px width */
+/* Mobile First*/
 .eventSection {
   width: 390px;
   background-color: rgba(206, 211, 205, 1);
@@ -67,6 +67,27 @@
   position: relative;
   margin-top: -20px;
   z-index: 1;
+}
+
+/* Date Time Container */
+.dateTimeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.date,
+.time {
+  color: rgba(255, 255, 255, 1);
+  font-family: "Zen Loop", cursive;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  text-align: center;
+  margin: 0;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 .eventDetails h3 {

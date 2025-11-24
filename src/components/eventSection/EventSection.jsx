@@ -39,26 +39,6 @@ const EventSection = () => {
     setOpenEvent(openEvent === id ? null : id);
   };
 
-  if (loading) {
-    return (
-      <section className={styles.eventSection}>
-        <p style={{ textAlign: "center", color: "rgba(51, 98, 108, 1)" }}>
-          Henter aktiviteter...
-        </p>
-      </section>
-    );
-  }
-
-  if (error) {
-    return (
-      <section className={styles.eventSection}>
-        <p style={{ textAlign: "center", color: "rgba(220, 53, 69, 1)" }}>
-          Fejl: {error}
-        </p>
-      </section>
-    );
-  }
-
   return (
     <section className={styles.eventSection}>
       {events.map((event) => (
@@ -72,10 +52,10 @@ const EventSection = () => {
             className={styles.eventImage}
           />
           <div className={styles.eventDetails}>
-            <h3>
-              {event.date && `${event.date} - `}
-              {event.time}
-            </h3>
+            <div className={styles.dateTimeContainer}>
+              {event.date && <h3 className={styles.date}>{event.date}</h3>}
+              {event.time && <h3 className={styles.time}>{event.time}</h3>}
+            </div>
             <button
               className={styles.toggleButton}
               onClick={() => toggleEvent(event._id)}
