@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import styles from "./staysection.module.css";
 import Button from "../button/Button";
+import StayCard from "../../Staycard/StayCard";
+import { API_BASE_URL } from "../../config";
 
 const StaySection = () => {
   const [stays, setStays] = useState([]);
@@ -10,9 +12,7 @@ const StaySection = () => {
   useEffect(() => {
     const fetchStays = async () => {
       try {
-        const response = await fetch(
-          "https://glamping-rqu9j.ondigitalocean.app/stays/"
-        );
+        const response = await fetch(`${API_BASE_URL}/stays/`);
         if (!response.ok) {
           throw new Error("Failed to fetch stays");
         }
@@ -35,23 +35,7 @@ const StaySection = () => {
     <section className={styles.staySection}>
       <div className={styles.staysContainer}>
         {stays.map((stay) => (
-          <div key={stay._id} className={styles.stayCard}>
-            <div className={styles.stayInfo}>
-              <h2 className={styles.stayName}>{stay.title}</h2>
-              <h3 className={styles.stayDetails}>
-                <p className={styles.stayPersons}>
-                  {stay.numberOfPersons} personer
-                </p>
-                <p className={styles.stayPrice}>{stay.price},-</p>
-              </h3>
-            </div>
-            <img
-              src={stay.image}
-              alt={stay.title}
-              className={styles.stayImage}
-            />
-            <Button buttonText="Læs mere" variant="secondary" />
-          </div>
+          <StayCard key={stay._id} stay={stay} />
         ))}
       </div>
     </section>

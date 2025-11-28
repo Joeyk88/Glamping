@@ -3,6 +3,7 @@
   position: relative;
   width: 390px;
   height: 1178px;
+  background-color: rgba(206, 211, 205, 1);
 }
 
 /* Background Image Container */
@@ -53,6 +54,8 @@
   color: rgba(255, 255, 255, 1);
   font-weight: bold;
   line-height: 1.2;
+  white-space: nowrap;
+  overflow: visible;
 }
 
 /* Headline Container */

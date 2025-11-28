@@ -1,0 +1,348 @@
+/* Mobile First*/
+.activitiesSection {
+  width: 390px;
+  background-color: rgba(206, 211, 205, 1);
+  padding: 40px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Activity Card */
+.activityCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Activity Header */
+.activityHeader {
+  width: 361px;
+  min-height: 132px;
+  padding: 14px 45px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: rgba(197, 180, 150, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -20px;
+}
+
+.activityHeader h2 {
+  color: rgba(255, 255, 255, 1);
+  font-family: "Zen Loop", cursive;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 100%;
+  text-align: center;
+  margin: 0;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Heart Button */
+.heartButton {
+  width: 45px;
+  height: 40px;
+  padding: 8px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.heartButton:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.heartButton:active {
+  transform: scale(0.95);
+}
+
+.heartIcon {
+  width: 24px;
+  height: 24px;
+  color: rgba(255, 255, 255, 0.18);
+}
+
+/* Activity Image */
+.activityImage {
+  width: 390px;
+  height: 311px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Activity Details */
+.activityDetails {
+  width: 361px;
+  min-height: 194px;
+  padding: 25px 42px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: rgba(51, 98, 108, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  margin-top: -20px;
+  z-index: 1;
+}
+
+/* Date Time Container */
+.dateTimeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.date,
+.time {
+  color: rgba(255, 255, 255, 1);
+  font-family: "Zen Loop", cursive;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  text-align: center;
+  margin: 0;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.activityDetails h3 {
+  color: rgba(255, 255, 255, 1);
+  font-family: "Zen Loop", cursive;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  text-align: center;
+  margin: 0;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Toggle Button */
+.toggleButton {
+  width: 325px;
+  height: 63px;
+  padding: 14px 45px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 1);
+  font-family: "Zen Loop", cursive;
+  font-weight: 400;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggleButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.toggleButton:active {
+  transform: translateY(0);
+}
+
+.icon {
+  font-size: 28px;
+}
+
+/* Activity Content */
+.activityContent {
+  width: 296px;
+  padding-top: 15px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.activityContent p {
+  font-family: "Zen Loop", cursive;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .activitiesSection {
+    width: 768px;
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  .activityHeader {
+    width: 420px;
+    min-height: 150px;
+  }
+
+  .activityHeader h2 {
+    font-size: 72px;
+  }
+
+  .activityImage {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+  }
+
+  .activityDetails {
+    width: 420px;
+    min-height: 220px;
+  }
+
+  .activityDetails h3 {
+    font-size: 36px;
+  }
+
+  .toggleButton {
+    width: 350px;
+    height: 70px;
+    font-size: 26px;
+  }
+
+  .activityContent {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .activityContent p {
+    font-size: 22px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .activitiesSection {
+    width: 100%;
+    max-width: 1400px;
+    padding: 80px 60px;
+    margin: 0 auto;
+    gap: 60px;
+  }
+
+  .activityCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .activityCard:nth-child(odd) .activityHeader {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .activityCard:nth-child(odd) .activityImage {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .activityCard:nth-child(odd) .activityDetails {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .activityCard:nth-child(even) .activityHeader {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .activityCard:nth-child(even) .activityImage {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .activityCard:nth-child(even) .activityDetails {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .activityHeader {
+    width: 480px;
+    min-height: 160px;
+    margin-bottom: 0;
+  }
+
+  .activityHeader h2 {
+    font-size: 80px;
+    width: auto;
+    height: auto;
+  }
+
+  .activityImage {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+  }
+
+  .activityDetails {
+    width: 480px;
+    min-height: 300px;
+    padding: 40px 50px;
+  }
+
+  .activityDetails h3 {
+    font-size: 40px;
+    width: auto;
+    height: auto;
+  }
+
+  .toggleButton {
+    width: 380px;
+    height: 75px;
+    font-size: 28px;
+  }
+
+  .activityContent {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .activityContent p {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}

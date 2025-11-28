@@ -1,0 +1,18 @@
+/* Mobile First - 390px width */
+.contactPageHero :global(.subtitle) {
+  margin-top: 140px;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .contactPageHero :global(.subtitle) {
+    margin-top: 30px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .contactPageHero :global(.subtitle) {
+    margin-top: 20px;
+  }
+}

@@ -7,6 +7,7 @@ const HeroSection = ({
   headerTitle,
   title,
   subtitle,
+  details,
 }) => {
   return (
     <section className={styles.heroSection}>
@@ -22,8 +23,16 @@ const HeroSection = ({
 
       <div className={styles.headline}>
         <h2 className={styles.title}>{title}</h2>
-        <h4 className={styles.subtitle}>{subtitle}</h4>
+        <h4 className={`${styles.subtitle} subtitle`}>{subtitle}</h4>
       </div>
+
+      <ul>
+        {details?.includes?.map((item, index) => (
+          <li key={index} className={styles.detailItem}>
+            {item}
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };

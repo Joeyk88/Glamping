@@ -1,11 +1,30 @@
-/* Mobile First*/
-.eventSection {
+/* Mobile First - 390px width */
+.myListSection {
   width: 390px;
   background-color: rgba(206, 211, 205, 1);
   padding: 40px 15px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  min-height: 400px;
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.emptyState p {
+  font-family: "Zen Loop", cursive;
+  font-size: 24px;
+  color: rgba(51, 98, 108, 1);
+  margin: 0;
 }
 
 /* Event Card */
@@ -42,6 +61,41 @@
   margin: 0;
   max-width: 100%;
   word-wrap: break-word;
+}
+
+/* Heart Button */
+.heartButton {
+  width: 45px;
+  height: 40px;
+  padding: 8px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.heartButton:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.heartButton:active {
+  transform: scale(0.95);
+}
+
+.heartIcon {
+  width: 24px;
+  height: 24px;
+  color: rgba(255, 255, 255, 1);
 }
 
 /* Event Image */
@@ -167,10 +221,14 @@
 
 /* Tablet and larger screens */
 @media (min-width: 768px) {
-  .eventSection {
+  .myListSection {
     width: 768px;
     padding: 60px 40px;
     gap: 40px;
+  }
+
+  .emptyState p {
+    font-size: 28px;
   }
 
   .eventHeader {
@@ -215,12 +273,16 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .eventSection {
+  .myListSection {
     width: 100%;
     max-width: 1400px;
     padding: 80px 60px;
     margin: 0 auto;
     gap: 60px;
+  }
+
+  .emptyState p {
+    font-size: 32px;
   }
 
   .eventCard {

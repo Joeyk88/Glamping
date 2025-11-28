@@ -11,6 +11,7 @@
 .buttonText {
   margin: 0;
   opacity: 1;
+  text-align: center;
 }
 
 /* Variant 1: BOOK NU (hvid kant og tekst) */

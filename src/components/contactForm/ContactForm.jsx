@@ -4,9 +4,10 @@ import Button from "../button/Button";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
+import { API_BASE_URL } from "../../config";
 
 const ContactForm = () => {
-  // Yup valideringsskema - her definerer vi reglerne hvad brugeren skal udfylde
+  // Yup valideringsskema - her definerer jeg reglerne hvad brugeren skal udfylde
   const schema = yup.object().shape({
     name: yup.string().required("Navn er påkrævet"),
     email: yup.string().email("Ugyldig email").required("Email er påkrævet"),
@@ -26,14 +27,11 @@ const ContactForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch(
-        "https://glamping-rqu9j.ondigitalocean.app/contact",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        }
-      );
+      const response = await fetch(`${API_BASE_URL}/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
       console.log(response);
 
@@ -51,21 +49,21 @@ const ContactForm = () => {
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <label>Navn</label>
-      <input type='text' {...register("name")} />
+      <input type="text" {...register("name")} />
       {errors.name && (
         <span className={styles.error}>{errors.name.message}</span>
       )}
       <label>Email</label>
-      <input type='email' {...register("email")} />
+      <input type="email" {...register("email")} />
       {errors.email && (
         <span className={styles.error}>{errors.email.message}</span>
       )}
 
       <label>Hvad drejer henvendelsen sig om?</label>
-      <input type='text' {...register("subject")} />
+      <input type="text" {...register("subject")} />
       <label>Besked (Skriv dato'er, hvis det drejer sig om en booking)</label>
-      <textarea rows='5' {...register("message")} />
-      <Button buttonText='Indsend' />
+      <textarea rows="5" {...register("message")} />
+      <Button buttonText="Indsend" />
     </form>
   );
 };

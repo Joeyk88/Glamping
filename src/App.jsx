@@ -7,8 +7,9 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/Home";
 import Stay from "./pages/Stay";
 import ContactPage from "./pages/ContactPage";
-import Events from "./pages/Events";
+import Activities from "./pages/Activities";
 import MyList from "./pages/MyList";
+import StayDetail from "./pages/StayDetail";
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/ophold" element={<Stay />} />
+            <Route path="/ophold/:id" element={<StayDetail />} />
             <Route path="/kontakt" element={<ContactPage />} />
-            <Route path="/aktiviteter" element={<Events />} />
+            <Route path="/aktiviteter" element={<Activities />} />
             <Route path="/min-liste" element={<MyList />} />
           </Routes>
           <Footer />

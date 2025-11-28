@@ -2,9 +2,12 @@ import styles from "./pageHeader.module.css";
 import logo from "/logo.png";
 import Button from "../button/Button";
 
-const PageHeader = () => {
+const PageHeader = ({ bgImg }) => {
   return (
-    <header className={styles.pageheader}>
+    <header
+      className={styles.pageheader}
+      style={{ backgroundImage: `url(${bgImg})` }}
+    >
       <div className={styles.headerContent}>
         <img src={logo} alt="Glamping Logo" className={styles.logo} />
         <h2 className={styles.subHeaderText}>Gittes</h2>
