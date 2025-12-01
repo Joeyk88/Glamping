@@ -1,0 +1,113 @@
+/* Mobile First - 390px width */
+.form {
+  width: 390px;
+  padding: 40px 20px;
+  background-color: rgba(51, 98, 108, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Label */
+.form label {
+  color: rgba(255, 255, 255, 1);
+  font-family: "Zen Loop", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Input */
+.form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid rgba(130, 155, 151, 1);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: rgba(51, 98, 108, 1);
+  color: rgba(51, 98, 108, 1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: rgba(130, 155, 151, 1);
+  box-shadow: 0 0 0 3px rgba(130, 155, 151, 0.3);
+}
+
+/* Textarea */
+.form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid rgba(130, 155, 151, 1);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: rgba(51, 98, 108, 1);
+  color: rgba(51, 98, 108, 1);
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form textarea:focus {
+  outline: none;
+  border-color: rgba(130, 155, 151, 1);
+  box-shadow: 0 0 0 3px rgba(130, 155, 151, 0.3);
+}
+
+/* Error Message */
+.error {
+  color: rgba(255, 200, 200, 1);
+  font-size: 14px;
+  margin-top: 4px;
+  display: block;
+  font-weight: 500;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .form {
+    width: 768px;
+    padding: 60px 80px;
+    gap: 25px;
+  }
+
+  .form label {
+    font-size: 26px;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 17px;
+    padding: 14px 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .form {
+    width: 100%;
+    max-width: 1400px;
+    padding: 80px 100px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+
+  .form label {
+    font-size: 28px;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+
+  .form textarea {
+    min-height: 150px;
+  }
+}

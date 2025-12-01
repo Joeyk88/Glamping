@@ -1,11 +1,46 @@
 import "./App.css";
-import PageHeader from "./components/pageHeader/PageHeader";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Navigation from "./components/navigation/Navigation";
+import Footer from "./components/footer/Footer";
+import Home from "./pages/Home";
+import Stay from "./pages/Stay";
+import ContactPage from "./pages/ContactPage";
+import Activities from "./pages/Activities";
+import MyList from "./pages/MyList";
+import StayDetail from "./pages/StayDetail";
 
 function App() {
   return (
-    <>
-      <PageHeader />
-    </>
+    <Router>
+      <div className="App">
+        <Navigation />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/ophold" element={<Stay />} />
+            <Route path="/ophold/:id" element={<StayDetail />} />
+            <Route path="/kontakt" element={<ContactPage />} />
+            <Route path="/aktiviteter" element={<Activities />} />
+            <Route path="/min-liste" element={<MyList />} />
+          </Routes>
+          <Footer />
+        </main>
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+      </div>
+    </Router>
   );
 }
 
